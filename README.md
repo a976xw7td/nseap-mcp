@@ -78,8 +78,10 @@ NSEAP_MOCK=1 NSEAP_STUDENT_ID=test-student pnpm dev
 
 ```bash
 pnpm typecheck   # tsc 零错误
-pnpm test        # 28 个单元测试
+pnpm test        # 33 个单元测试（含 5 个契约测试）
 pnpm smoke       # 冒烟（握手/12工具注册/预检/拦截）
+pnpm demo:student  # 学生全流程预演（9 步，mock 模式，无需凭证）
+pnpm demo:teacher  # 教师全流程预演（5 步，mock 模式，无需凭证）
 ```
 
 ## 错误码
