@@ -17,12 +17,12 @@ jobs:
       - uses: actions/checkout@v4
 
       - uses: pnpm/action-setup@v4
-        with:
-          version: 10
+        # 版本由 package.json 的 packageManager 字段指定（pnpm@10.34.5），
+        # 不在此处重复指定以免版本冲突
 
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
           cache: pnpm
 
       - name: Install dependencies
