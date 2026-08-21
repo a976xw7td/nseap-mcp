@@ -1,0 +1,33 @@
+{
+  "name": "nseap-mcp",
+  "version": "0.1.0",
+  "description": "NSEAP 教育平台 × Cogseed 连接器 —— stdio MCP Server，包装平台 HTTP Agent 协议（x-api-key），提供本地交付物检查与提交-评审-通知闭环工具",
+  "type": "module",
+  "bin": {
+    "nseap-mcp": "./dist/index.js"
+  },
+  "scripts": {
+    "dev": "tsx src/index.ts",
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/index.js",
+    "typecheck": "tsc --noEmit",
+    "test": "node --test --import tsx \"test/*.test.ts\"",
+    "smoke": "bash scripts/smoke-m0.sh"
+  },
+  "keywords": ["mcp", "nseap", "education", "feishu", "github"],
+  "author": "",
+  "license": "MIT",
+  "packageManager": "pnpm@10.34.5",
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.30.0",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@types/node": "^26.2.0",
+    "tsx": "^4.23.12",
+    "typescript": "^7.0.2"
+  }
+}
