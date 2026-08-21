@@ -1,0 +1,15 @@
+{
+  "display_name": "NSEAP 学习平台",
+  "transport": {
+    "kind": "stdio",
+    "command": "node",
+    "args": ["<REPLACE: /path/to/nseap-mcp/dist/index.js>"],
+    "env": {
+      "NSEAP_SERVER_URL": "http://49.233.169.16",
+      "NSEAP_API_KEY": "<REPLACE: 学生 api_key，从平台下载 NSEAP-config-学号.json>",
+      "NSEAP_STUDENT_ID": "<REPLACE: 学号>",
+      "NSEAP_COHORT": "<REPLACE: 班级，可选>",
+      "NSEAP_ROLE": "student"
+    }
+  }
+}
