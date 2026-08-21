@@ -13,7 +13,9 @@
     "start": "node dist/index.js",
     "typecheck": "tsc --noEmit",
     "test": "node --test --import tsx \"test/*.test.ts\"",
-    "smoke": "bash scripts/smoke-m0.sh"
+    "smoke": "bash scripts/smoke-m0.sh",
+    "demo:student": "NSEAP_MOCK=1 NSEAP_STUDENT_ID=demo-student node --import tsx scripts/demo-e2e.ts",
+    "demo:teacher": "NSEAP_MOCK=1 NSEAP_STUDENT_ID=teacher-demo NSEAP_ROLE=teacher node --import tsx scripts/demo-teacher.ts"
   },
   "keywords": [
     "mcp",
