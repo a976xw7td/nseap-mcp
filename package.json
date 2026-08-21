@@ -9,12 +9,19 @@
   "scripts": {
     "dev": "tsx src/index.ts",
     "build": "tsc -p tsconfig.json",
+    "bundle": "node scripts/bundle.mjs",
     "start": "node dist/index.js",
     "typecheck": "tsc --noEmit",
     "test": "node --test --import tsx \"test/*.test.ts\"",
     "smoke": "bash scripts/smoke-m0.sh"
   },
-  "keywords": ["mcp", "nseap", "education", "feishu", "github"],
+  "keywords": [
+    "mcp",
+    "nseap",
+    "education",
+    "feishu",
+    "github"
+  ],
   "author": "",
   "license": "MIT",
   "packageManager": "pnpm@10.34.5",
@@ -27,6 +34,7 @@
   },
   "devDependencies": {
     "@types/node": "^26.2.0",
+    "esbuild": "^0.28.2",
     "tsx": "^4.23.12",
     "typescript": "^7.0.2"
   }

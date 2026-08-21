@@ -38,8 +38,19 @@ NSEAP 教育平台 × Cogseed 连接器 —— stdio MCP Server。包装平台 H
 ```bash
 pnpm install          # Node ≥20
 pnpm dev              # 开发模式（tsx 直跑）
-pnpm build && pnpm start   # 生产模式
+pnpm build && pnpm start   # 生产模式（dist/）
+pnpm bundle           # 单文件打包（dist-bundle/nseap-mcp.mjs，自包含无 node_modules）
 ```
+
+### 分发（M1，推荐）
+
+```bash
+pnpm bundle
+# 产物 dist-bundle/nseap-mcp.mjs（1.1MB 自包含），任意有 Node ≥20 的机器：
+node dist-bundle/nseap-mcp.mjs
+```
+
+CogSeed 连接器 command 直接指向该文件，无需 nseap-mcp 项目环境。
 
 环境变量见 [.env.example](.env.example)。
 

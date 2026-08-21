@@ -37,6 +37,9 @@ jobs:
       - name: Build
         run: pnpm build
 
+      - name: Bundle (single-file)
+        run: pnpm bundle
+
       - name: Smoke test (mock mode)
         run: |
           export PATH="$PWD/node_modules/.bin:$PATH"
