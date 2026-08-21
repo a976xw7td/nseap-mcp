@@ -49,3 +49,4 @@ jobs:
         run: |
           export PATH="$PWD/node_modules/.bin:$PATH"
           NSEAP_MOCK=1 NSEAP_STUDENT_ID=demo-student node --import tsx scripts/demo-e2e.ts
+          NSEAP_MOCK=1 NSEAP_STUDENT_ID=teacher-demo NSEAP_ROLE=teacher node --import tsx scripts/demo-teacher.ts
